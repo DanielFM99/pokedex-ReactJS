@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 8rem;
+  overflow: auto;
+  padding: 40px 60px 0 60px;
+  height: calc(100vh - 90px);
+  margin-bottom: 20px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 90px);
+}
