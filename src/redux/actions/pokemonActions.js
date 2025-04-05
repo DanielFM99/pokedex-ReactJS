@@ -29,7 +29,7 @@ export const getPokemonsFailure = () => ({
 function createPokemon(pokemon) {
   return {
     name: upperCase(pokemon.name),
-    image: `https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`,
+    image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`,
     size: "small",
     type: pokemon.types.map((element) => element.type.name),
     height: pokemon.height,
@@ -43,7 +43,7 @@ function createPokemon(pokemon) {
 export const fetchPokemon = () => (dispatch) => {
   const promises = [];
   dispatch(getPokemonsRequest());
-  for (let i = 1; i <= 151; i++) {
+  for (let i = 1; i <= 1025; i++) {
     const promise = axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`);
     promises.push(promise);
   }
